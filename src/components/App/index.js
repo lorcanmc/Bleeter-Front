@@ -1,13 +1,21 @@
-import logo from './logo.svg';
-import './index.css';
-import Header from "../Header/"
+import "./index.css";
+import Header from "../Header/";
+import Main from "../Main/";
+import Aside from "../Aside/";
+
+
 
 function App() {
   return (
     <div className="App">
-      <Header className="App-header"></Header>
+      <Header></Header>
+      <Main></Main>
+      <Aside></Aside>
     </div>
   );
 }
 
 export default App;
+
+
+

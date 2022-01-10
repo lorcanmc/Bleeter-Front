@@ -1,0 +1,43 @@
+.Header img {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-button {
+    cursor:pointer;
+  color: #000000;
+  background-color: #ffffff;
+  border-radius: 2em;
+  padding: 10px 10px;
+  margin: 5px;
+  border: none;
+  /* text-decoration: none; */
+}
+.nav-button:hover {
+  background-color: #eeeeee;
+}
+
+.nav-button-span {
+  display: flex;
+  flex-direction: row;
+  vertical-align: middle;
+  /* line-height: normal; */
+  align-items: center;
+}
+
+.nav-button h2 {
+  margin-left: 10px;
+  font-family: "Helvetica", sans-serif;
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.home-button {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.home-button:hover {
+    background-color: red;
+}
