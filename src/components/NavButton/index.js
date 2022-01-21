@@ -2,8 +2,6 @@ import { useState } from "react"
 
 function NavButton({ text, imgSrc}) {
 
-    console.log(imgSrc)
-
   return (
     <button className="nav-button">
         <span className="nav-button-span">
