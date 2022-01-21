@@ -1,12 +1,19 @@
 .Main {
-  width: 50vw;
-  max-width: 700px;
+  /* border: 1px solid black; */
+  margin: 10px;
+  min-width: 500px;
+  max-width: 500px;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
   color: rgb(0, 0, 0);
+}
+
+.tweet-input-box {
+  border: 1px solid rgb(182, 182, 182);
+  width: 100%;
 }
 
 .tweet-button {

@@ -1,4 +1,9 @@
-.Header img {
+.home-logo {
+  width: 200px;
+  /* height: 300px; */
+}
+
+.nav-button img {
   width: 30px;
   height: 30px;
 }

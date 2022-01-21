@@ -39,9 +39,9 @@ function Header() {
   return (
     <header className="Header">
       <div className="upper-header">
-        <button className="home-button home-logo">
-          <img src="https://www.danoneinstitute.org/wp-content/uploads/2020/06/logo-rond-twitter.png" alt=""></img>
-        </button>
+        
+        <img className="home-logo" src="https://static01.nyt.com/images/2015/08/09/arts/09SHAUN-SHEEP3/09SHAUN-SHEEP3-superJumbo.jpg" alt="sheep logo"></img>
+        
         {navSettings.map((navSetting) => {
           return (
             <NavButton

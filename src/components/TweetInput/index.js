@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { API_URL } from "../../config.js"
+
 export default function TweetInput() {
   const [tweetText, setTweetText] = useState("");
 
@@ -25,7 +27,7 @@ export default function TweetInput() {
       body: JSON.stringify(tweetObj),
     };
     const response = await fetch(
-      "http://localhost:3001/tweets",
+      `${API_URL}/tweets`,
       requestOptions
     );
     const data = await response.json();
@@ -33,9 +35,9 @@ export default function TweetInput() {
   }
 
   return (
-    <div>
+    <div className="tweet-input-box">
       <h1>Home</h1>
-      <input onChange={handleChange} placeholder="What's happening?"></input>
+      <input style={{fontSize: "22px"}}onChange={handleChange} placeholder="What's happening?"></input>
       <button
         onClick={() => handleClick(tweetText)}
         style={setTweetButtonStyle()}
