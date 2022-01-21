@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import TweetInput from "../TweetInput";
 
+import { API_URL } from "../../config.js"
 import TweetList from "../TweetList";
-import Tweet from "../Tweet";
 import "./main.css";
 
 function Main() {
@@ -11,9 +11,9 @@ function Main() {
 
   useEffect(() => {
     async function getTweets() {
-      const response = await fetch("http://localhost:3001/tweets");
+      const response = await fetch(`${API_URL}/tweets`);
+        // `${API_URL}/tweets`);
       const data = await response.json();
-      console.log(data.payload)
       setTweetList(data.payload);
     }
     getTweets()
