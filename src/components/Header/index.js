@@ -6,7 +6,7 @@ import NavButton from "../NavButton";
 function Header() {
   const navSettings = [
     {
-      src: "https://as2.ftcdn.net/v2/jpg/00/97/00/07/1000_F_97000769_R4zepLTgmf8G22W7G2o8JA1HeiVK2CkK.jpg",
+      src: "https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-house-icon-png-image_695726.jpg",
       text: "Home",
     },
     {

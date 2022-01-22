@@ -23,7 +23,7 @@ function Main() {
     const tweetObj = {
       text: tweetText,
       timestamp: Date.now().toString(),
-      author: nickname ? nickname : "Anon"
+      author: nickname
     };
 
     const requestOptions = {

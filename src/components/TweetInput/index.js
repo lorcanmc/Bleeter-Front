@@ -32,6 +32,7 @@ export default function TweetInput({ handleClick }) {
       <input
         className="tweet-input-textbox"
         onChange={handleTextChange}
+        maxLength="200"
         placeholder="What's happening?"
       ></input>
 

@@ -31,7 +31,7 @@ export default function Tweet({ text, time, nickname }) {
     if (arr.length === 1) {
       return arr[0][0].toUpperCase();
     } else {
-      return (arr[0][0] + arr[arr.length - 1][0]).toUpperCase();
+      return (arr[0][0] + arr[arr.length-1][0]).toUpperCase();
     }
   }
 
@@ -39,9 +39,13 @@ export default function Tweet({ text, time, nickname }) {
     let hue = 100;
     if (nickname) {
       hue = nickname.charCodeAt(0) ** 3;
+    } else {
+      return `rgb(45, 45, 59)`;
     }
 
-    return `hsl(${hue}, 80%, 20%)`;
+    const saturation = hue % 50 + 50;
+
+    return `hsl(${hue}, ${saturation}%, 30%)`;
   }
 
   return (
