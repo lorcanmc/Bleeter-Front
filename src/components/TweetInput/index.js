@@ -1,12 +1,17 @@
 import { useState } from "react";
 
-import { API_URL } from "../../config.js";
+// import { API_URL } from "../../config.js";
 
-export default function TweetInput() {
+export default function TweetInput({ handleClick }) {
   const [tweetText, setTweetText] = useState("");
+  const [nickname, setNickName] = useState("");
 
-  function handleChange(e) {
+  function handleTextChange(e) {
     setTweetText(e.target.value);
+  }
+
+  function handleNicknameChange(e) {
+    setNickName(e.target.value);
   }
 
   function setTweetButtonStyle() {
@@ -15,35 +20,23 @@ export default function TweetInput() {
     }
   }
 
-  async function handleClick(tweetText) {
-    const tweetObj = {
-      text: tweetText,
-      timestamp: Date.now().toString(),
-    };
-
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(tweetObj),
-    };
-    await fetch(`${API_URL}/tweets`, requestOptions);
-
-    document.querySelector("input").value = "";
-  }
 
   return (
     <div className="tweet-input-box">
-    
-      
-      <input className="nickname-input" placeholder="Nickname(optional)"></input>
-    
       <input
-        class="tweet-input-textbox"
-        onChange={handleChange}
+        className="nickname-input"
+        onChange={handleNicknameChange}
+        placeholder="Nickname(optional)"
+      ></input>
+
+      <input
+        className="tweet-input-textbox"
+        onChange={handleTextChange}
         placeholder="What's happening?"
       ></input>
+
       <button
-        onClick={() => handleClick(tweetText)}
+        onClick={() => handleClick(tweetText, nickname)}
         style={setTweetButtonStyle()}
         className="tweet-button"
       >

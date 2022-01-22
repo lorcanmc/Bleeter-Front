@@ -5,7 +5,7 @@ export default function TweetList({ tweetList }) {
   return (
     <div>
       {tweetList.map(({ text, timestamp }) => {
-        return <Tweet key={timestamp} time={timestamp} text={text}></Tweet>;
+        return <Tweet key={timestamp} time={timestamp} text={text} nickname="Nickname goes here"></Tweet>;
       })}
     </div>
   );
