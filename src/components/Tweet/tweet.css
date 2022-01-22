@@ -14,7 +14,8 @@
 }
 
 .tweet:hover {
-    background-color: rgb(192, 233, 252);
+    background-color: rgb(45, 45, 59);
+    color: white;
 }
 
 .initials-div {
@@ -23,7 +24,7 @@
     width: 60px;
     height: 60px;
     border-radius: 100px;
-    background-color: rgb(192, 233, 252);
+    /* background-color: rgb(192, 233, 252); */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +32,7 @@
 }
 
 .initials {
+    color: white;
     line-height: 0;
     font-size: 20px;
     font-weight: bold;
@@ -46,5 +48,5 @@
 }
 
 .tweet-text {
-    margin: 5px;
+    margin: 12px;
 }

@@ -40,7 +40,7 @@ export default function TweetInput({ handleClick }) {
         style={setTweetButtonStyle()}
         className="tweet-button"
       >
-        Tweet
+        Bleet
       </button>
     </div>
   );

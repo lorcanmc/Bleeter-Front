@@ -8,7 +8,7 @@ import "./main.css";
 function Main() {
   const [tweetList, setTweetList] = useState([]);
   const [tweetsPosted, setTweetsPosted] = useState(0);
-  // console.log("tweetList", tweetList);
+  console.log("tweetList", tweetList);
 
   useEffect(() => {
     async function getTweets() {
@@ -23,7 +23,7 @@ function Main() {
     const tweetObj = {
       text: tweetText,
       timestamp: Date.now().toString(),
-      name: nickname ? nickname : "Anon"
+      author: nickname ? nickname : "Anon"
     };
 
     const requestOptions = {

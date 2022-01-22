@@ -29,11 +29,6 @@ function Header() {
       src: "https://cdn-icons-png.flaticon.com/512/151/151917.png",
       text: "Lists",
     },
-    { src: "../Header/account_icon.png", text: "Profile" },
-    {
-      src: "https://as2.ftcdn.net/v2/jpg/03/16/59/73/1000_F_316597363_G8dPZwXqbsq9vs7uiomI9gIlwdT7sywy.jpg",
-      text: "More",
-    },
   ];
 
   return (

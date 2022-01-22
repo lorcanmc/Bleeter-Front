@@ -3,8 +3,8 @@ import TrendingStory from "../TrendingStory";
 function Aside() {
   const trendingStories = [
     {
-      topic: "Politics",
-      heading: "Nigel Farage",
+      topic: "SoC",
+      heading: "Week 10 soon",
       NumberOfTweets: 8000,
     },
     {
@@ -16,7 +16,7 @@ function Aside() {
 
   return (
     <aside className="Aside">
-      <input id="aside-input" type="text" placeholder="Search Twitter"></input>
+      <input id="aside-input" type="text" placeholder="Search Bleeter"></input>
       <div className="whats-happening">
         <h2>What's Happening</h2>
         {trendingStories.map((story) => {
