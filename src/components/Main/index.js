@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import TweetInput from "../TweetInput";
 
-import { API_URL } from "../../config.js"
+import { API_URL } from "../../config.js";
 import TweetList from "../TweetList";
 import "./main.css";
 
@@ -12,17 +12,16 @@ function Main() {
   useEffect(() => {
     async function getTweets() {
       const response = await fetch(`${API_URL}/tweets`);
-        // `${API_URL}/tweets`);
+      // `${API_URL}/tweets`);
       const data = await response.json();
       setTweetList(data.payload);
     }
-    getTweets()
+    getTweets();
   }, []);
-
-  
 
   return (
     <main className="Main">
+      <h1>Home</h1>
       <TweetInput></TweetInput>
       <TweetList tweetList={tweetList}></TweetList>
     </main>

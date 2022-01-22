@@ -25,12 +25,12 @@ export default function Tweet({ text, time }) {
     <div className="tweet">
       <div className="initials-div"></div>
       <div>
-        <span className="tweet-header">
-          <p style={{ fontWeight: "bold" }}>Anon.</p>
+        <div className="tweet-header">
+          <p style={{ fontWeight: "bold" }}>Anon</p>
           <p className="post-age">{timeSincePosted(time)} ago</p>
-        </span>
+        </div>
 
-        <p>{text}</p>
+        <p className="tweet-text">{text}</p>
       </div>
     </div>
   );

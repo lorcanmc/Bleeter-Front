@@ -9,6 +9,7 @@
     min-height: 90px;
     width: 500px;
     text-align: left;
+    overflow: auto;
 }
 
 .initials-div {
@@ -19,9 +20,13 @@
 
 .tweet-header {
     display: flex;
-
+    margin: 5px;
 }
 
 .post-age {
     margin-left: 20px;
+}
+
+.tweet-text {
+    margin: 5px;
 }

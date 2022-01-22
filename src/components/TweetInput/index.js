@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { API_URL } from "../../config.js"
+import { API_URL } from "../../config.js";
 
 export default function TweetInput() {
   const [tweetText, setTweetText] = useState("");
@@ -26,18 +26,22 @@ export default function TweetInput() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(tweetObj),
     };
-    const response = await fetch(
-      `${API_URL}/tweets`,
-      requestOptions
-    );
-    const data = await response.json();
-    console.log(data);
+    await fetch(`${API_URL}/tweets`, requestOptions);
+
+    document.querySelector("input").value = "";
   }
 
   return (
     <div className="tweet-input-box">
-      <h1>Home</h1>
-      <input style={{fontSize: "22px"}}onChange={handleChange} placeholder="What's happening?"></input>
+    
+      
+      <input className="nickname-input" placeholder="Nickname(optional)"></input>
+    
+      <input
+        class="tweet-input-textbox"
+        onChange={handleChange}
+        placeholder="What's happening?"
+      ></input>
       <button
         onClick={() => handleClick(tweetText)}
         style={setTweetButtonStyle()}
