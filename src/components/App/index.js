@@ -6,7 +6,7 @@ import Aside from "../Aside/";
 
 
 function App() {
-  console.log("app loaded")
+  console.log("app started")
   return (
     <div className="App">
     <div className="App-wrapper">
