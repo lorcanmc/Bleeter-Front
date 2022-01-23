@@ -49,3 +49,20 @@
 .tweet-text {
     margin: 15px 40px 15px 15px;
 }
+
+.like-button {
+    background-color: white;
+    height: 34px;
+    width: 34px;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.like-button:hover {
+    background-color: rgb(196, 228, 255);
+    color: rgb(154, 210, 255);
+}

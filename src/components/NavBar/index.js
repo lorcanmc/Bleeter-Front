@@ -1,9 +1,10 @@
 
 
-import "./Header.css";
+import thumbUp from "../../assets/thumbUp.png" 
+import "./NavBar.css";
 import NavButton from "../NavButton";
 
-function Header() {
+function NavBar() {
   const navSettings = [
     {
       src: "https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-house-icon-png-image_695726.jpg",
@@ -11,11 +12,11 @@ function Header() {
     },
     {
       src: "https://as1.ftcdn.net/v2/jpg/02/66/49/72/1000_F_266497240_sbKnQ0BEoOPafo9JaefZZz00WK7t8LHq.jpg",
-      text: "Explore",
+      text: "Stats",
     },
     {
-      src: "https://as2.ftcdn.net/v2/jpg/01/08/24/99/1000_F_108249947_UMBLfSCpTWU6AGiUz0F7a524koG3eO0z.jpg",
-      text: "Notifications",
+      src: thumbUp,
+      text: "Likes",
     },
     {
       src: "https://as2.ftcdn.net/v2/jpg/00/98/26/11/1000_F_98261159_Po5JS7ds82XaePJIsG1MiEtHRzOeUPNj.jpg",
@@ -32,7 +33,7 @@ function Header() {
   ];
 
   return (
-    <header className="Header">
+    <nav className="Header">
       <div className="upper-header">
         
         <img className="home-logo" src="https://static01.nyt.com/images/2015/08/09/arts/09SHAUN-SHEEP3/09SHAUN-SHEEP3-superJumbo.jpg" alt="sheep logo"></img>
@@ -48,8 +49,8 @@ function Header() {
         })}
       </div>
       <div className="lower-header"></div>
-    </header>
+    </nav>
   );
 }
 
-export default Header;
+export default NavBar;

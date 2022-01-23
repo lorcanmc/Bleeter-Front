@@ -1,5 +1,5 @@
 import "./index.css";
-import Header from "../Header/";
+import NavBar from "../NavBar/";
 import Main from "../Main/";
 import Aside from "../Aside/";
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
     <div className="App-wrapper">
-      <Header></Header>
+      <NavBar></NavBar>
       <Main></Main>
       <Aside></Aside>
     </div>

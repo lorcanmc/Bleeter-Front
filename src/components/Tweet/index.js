@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./tweet.css";
+import thumbUp from "../../assets/thumbUp.png";
 
 export default function Tweet({ text, time, nickname }) {
+  const [liked, setLiked] = useState(false);
+
   function timeSincePosted(postTime) {
     const seconds = Math.round((Date.now() - Number(time)) / 1000);
     if (seconds < 60) {
@@ -31,7 +34,7 @@ export default function Tweet({ text, time, nickname }) {
     if (arr.length === 1) {
       return arr[0][0].toUpperCase();
     } else {
-      return (arr[0][0] + arr[arr.length-1][0]).toUpperCase();
+      return (arr[0][0] + arr[arr.length - 1][0]).toUpperCase();
     }
   }
 
@@ -43,9 +46,13 @@ export default function Tweet({ text, time, nickname }) {
       return `rgb(45, 45, 59)`;
     }
 
-    const saturation = hue % 50 + 50;
+    const saturation = (hue % 50) + 50;
 
     return `hsl(${hue}, ${saturation}%, 30%)`;
+  }
+
+  function handleLikeClick() {
+    setLiked(!liked);
   }
 
   return (
@@ -63,6 +70,14 @@ export default function Tweet({ text, time, nickname }) {
         </div>
 
         <p className="tweet-text">{text}</p>
+        <div
+          className="like-button"
+          onClick={handleLikeClick}
+          style={{ backgroundColor: liked ? `rgb(154, 210, 255)` : "" }}
+        >
+        
+          <img src={thumbUp} alt="thumb up"></img>
+        </div>
       </div>
     </div>
   );
