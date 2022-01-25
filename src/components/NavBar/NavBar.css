@@ -1,6 +1,10 @@
+.Nav-bar {
+  /* width: 200px; */
+}
+
 .home-logo {
-  width: 200px;
-  /* height: 300px; */
+  width: 220px;
+  margin-top: 10px;
 }
 
 .nav-button img {
@@ -26,7 +30,6 @@
   display: flex;
   flex-direction: row;
   vertical-align: middle;
-  /* line-height: normal; */
   align-items: center;
 }
 
@@ -42,7 +45,3 @@
   width: 30px;
   height: 30px;
 }
-
-/* .home-button:hover {
-    background-color: red;
-} */

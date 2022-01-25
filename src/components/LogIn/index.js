@@ -2,7 +2,7 @@
 
 export default function LogIn() {
   return (
-    <div>
+    <div className="log-in">
       <h1>LOG IN</h1>
       <h3 style={{color: "red"}}>UNDER CONSTRUCTION</h3>
       <h4>Username</h4>

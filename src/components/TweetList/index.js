@@ -8,13 +8,15 @@ export default function TweetList({ tweetList }) {
 
   return (
     <div>
-      {tweetList.map(({ text, timestamp, author, id }) => {
+      {tweetList.map(({ text, timestamp, author, id, likes }) => {
         return (
           <Tweet
             key={id}
+            tweetId={id}
+            nickname={author}
             time={timestamp}
             text={text}
-            nickname={author}
+            likes={likes}
           ></Tweet>
         );
       })}
