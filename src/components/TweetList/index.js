@@ -12,6 +12,7 @@ export default function TweetList({ tweetList }) {
         return (
           <Tweet
             key={id}
+            tweetId={id}
             time={timestamp}
             text={text}
             nickname={author}

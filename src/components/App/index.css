@@ -46,6 +46,11 @@
   color: rgb(0, 0, 0);
 }
 
+.log-in {
+  border: dashed black 1px;
+  padding: 20px;
+}
+
 #aside-input {
   margin: 10px;
   font-size: 18px;

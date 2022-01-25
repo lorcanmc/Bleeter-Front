@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 
 import "./tweet.css";
-import thumbUp from "../../assets/thumbUp.png";
+import heart from "../../assets/heart.png";
+import { API_URL } from "../../config.js"
 
-export default function Tweet({ text, time, nickname }) {
+export default function Tweet({ text, time, nickname, tweetId }) {
   const [liked, setLiked] = useState(false);
 
   function timeSincePosted(postTime) {
@@ -51,8 +52,18 @@ export default function Tweet({ text, time, nickname }) {
     return `hsl(${hue}, ${saturation}%, 30%)`;
   }
 
-  function handleLikeClick() {
+  async function handleLikeClick() {
     setLiked(!liked);
+    const update = {
+      liked: liked
+    };
+    const requestOptions = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(update),
+    };
+    console.log(`${API_URL}/tweets/${tweetId}`)
+    await fetch(`${API_URL}/tweets/${tweetId}`, requestOptions);
   }
 
   return (
@@ -63,7 +74,7 @@ export default function Tweet({ text, time, nickname }) {
       >
         <p className="initials">{getInitials(nickname)}</p>
       </div>
-      <div>
+      <div className="tweet-main">
         <div className="tweet-header">
           <p style={{ fontWeight: "bold" }}>{nickname ? nickname : "Anon"}</p>
           <p className="post-age">{timeSincePosted(time)} ago</p>
@@ -73,10 +84,10 @@ export default function Tweet({ text, time, nickname }) {
         <div
           className="like-button"
           onClick={handleLikeClick}
-          style={{ backgroundColor: liked ? `rgb(154, 210, 255)` : "" }}
+          style={{ backgroundColor: liked ? `rgb(0, 174, 255)` : "" }}
         >
         
-          <img src={thumbUp} alt="thumb up"></img>
+          <img src={heart} alt="thumb up"></img>
         </div>
       </div>
     </div>

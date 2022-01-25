@@ -1,12 +1,11 @@
 * {
-    font-size: 15px;
+    /* border: 1px solid black; */
 }
 
 .tweet {
     display: flex;
     flex-direction: row;
     border: 1px solid rgb(231, 228, 228);
-    min-height: 90px;
     width: 500px;
     text-align: left;
     overflow: auto;
@@ -37,25 +36,33 @@
     font-weight: bold;
 }
 
+.tweet-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-end; */
+}
+
 .tweet-header {
     display: flex;
     margin: 10px;
 }
 
 .post-age {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .tweet-text {
-    margin: 15px 40px 15px 15px;
+    margin: 10px; 
 }
 
 .like-button {
+    align-self: flex-end;
     background-color: white;
-    height: 34px;
-    width: 34px;
+    height: 30px;
+    width: 30px;
     border-radius: 15px;
-    margin: 10px;
+    margin: 5px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,5 +71,5 @@
 
 .like-button:hover {
     background-color: rgb(196, 228, 255);
-    color: rgb(154, 210, 255);
+    color: rgb(0, 174, 255);
 }
