@@ -1,9 +1,10 @@
 .Nav-bar {
-  width: 200px;
+  /* width: 200px; */
 }
 
 .home-logo {
-  width: 200px;
+  width: 220px;
+  margin-top: 10px;
 }
 
 .nav-button img {

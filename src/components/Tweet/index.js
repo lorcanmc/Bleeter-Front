@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
 import "./tweet.css";
-import heart from "../../assets/heart.png";
-import { API_URL } from "../../config.js"
 
-export default function Tweet({ text, time, nickname, tweetId }) {
+import { API_URL } from "../../config.js";
+import LikeDisplay from "../LikeDisplay";
+
+export default function Tweet({ text, time, nickname, tweetId, likes }) {
   const [liked, setLiked] = useState(false);
 
   function timeSincePosted(postTime) {
@@ -55,14 +56,14 @@ export default function Tweet({ text, time, nickname, tweetId }) {
   async function handleLikeClick() {
     setLiked(!liked);
     const update = {
-      liked: liked
+      liked: !liked,
     };
     const requestOptions = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(update),
     };
-    console.log(`${API_URL}/tweets/${tweetId}`)
+    console.log(`${API_URL}/tweets/${tweetId}`);
     await fetch(`${API_URL}/tweets/${tweetId}`, requestOptions);
   }
 
@@ -81,14 +82,7 @@ export default function Tweet({ text, time, nickname, tweetId }) {
         </div>
 
         <p className="tweet-text">{text}</p>
-        <div
-          className="like-button"
-          onClick={handleLikeClick}
-          style={{ backgroundColor: liked ? `rgb(0, 174, 255)` : "" }}
-        >
-        
-          <img src={heart} alt="thumb up"></img>
-        </div>
+        <LikeDisplay liked={liked} likes={likes} handleClick={handleLikeClick}></LikeDisplay>
       </div>
     </div>
   );

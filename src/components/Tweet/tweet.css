@@ -3,6 +3,7 @@
 }
 
 .tweet {
+    font-size: 16px;
     display: flex;
     flex-direction: row;
     border: 1px solid rgb(231, 228, 228);
@@ -53,23 +54,35 @@
 }
 
 .tweet-text {
-    margin: 10px; 
+    margin: 10px 10px 0px 10px; 
+}
+
+.like-display {
+    /* border: 1px black solid; */
+    align-self: flex-end;
+    font-size: 16px;
+    margin: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .like-button {
+    /* border: 1px black solid; */
+    margin: 3px;
     align-self: flex-end;
     background-color: white;
     height: 30px;
     width: 30px;
     border-radius: 15px;
-    margin: 5px 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .like-button:hover {
     background-color: rgb(196, 228, 255);
-    color: rgb(0, 174, 255);
+}
+
+.like-button img {
+    width: 20px;
+    margin: 5px;
 }
