@@ -3,9 +3,7 @@ import React from 'react';
 import heart from "../../assets/heart.png"
 
 export default function LikeDisplay({ likes, liked, handleClick }) {
-
-
-    
+ 
   return (
     <div className="like-display">
     <p>{likes ? likes : ""}</p>

@@ -3,6 +3,7 @@
 import heart from "../../assets/heart.png";
 import home from "../../assets/home.png";
 import stats from "../../assets/stats.png";
+import leaderboard from "../../assets/leaderboard.png";
 import "./NavBar.css";
 import NavButton from "../NavButton";
 
@@ -21,7 +22,7 @@ function NavBar() {
       text: "Likes",
     },
     {
-      src: "https://as2.ftcdn.net/v2/jpg/00/98/26/11/1000_F_98261159_Po5JS7ds82XaePJIsG1MiEtHRzOeUPNj.jpg",
+      src: leaderboard,
       text: "Top Posters",
     },
     {

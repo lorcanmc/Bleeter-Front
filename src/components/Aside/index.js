@@ -1,6 +1,6 @@
 
 
-import LogIn from "../LogIn";
+import LogIn from "../LogInPortal";
 
 export default function Aside() {
   // const trendingStories = [
