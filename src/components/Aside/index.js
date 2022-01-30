@@ -1,6 +1,6 @@
 
 
-import LogIn from "../LogIn";
+import LoginPortal from "../LogInPortal";
 
 export default function Aside() {
   // const trendingStories = [
@@ -19,7 +19,7 @@ export default function Aside() {
   return (
     <aside className="Aside">
       <input id="aside-input" type="text" placeholder="Search Bleeter"></input>
-      <LogIn></LogIn>
+      <LoginPortal></LoginPortal>
     </aside>
   );
 }
